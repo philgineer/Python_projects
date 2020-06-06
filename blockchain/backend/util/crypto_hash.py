@@ -6,9 +6,9 @@ def crypto_hash(*args):
     Return a sha-256 hash of the given arguments.
     """
     stringified_args = sorted(map(json.dumps, args)) #make any type to string to encode
-    print(f'stringified_args: {stringified_args}')
+    # print(f'stringified_args: {stringified_args}')
     joined_args = ''.join(stringified_args)
-    print(f'joined_args: {joined_args}')
+    # print(f'joined_args: {joined_args}')
 
     return hashlib.sha256(joined_args.encode('utf-8')).hexdigest()
 
