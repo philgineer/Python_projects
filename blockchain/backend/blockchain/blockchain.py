@@ -41,6 +41,18 @@ class Blockchain:
         #     serialized_chain.append(block.to_json())
         # return serialized_chain
 
+    def from_json(chain_json):
+        """
+        Deserialize a list of serialized blocks into a Blockchain instance.
+        The result will contain a chain list of Block instances.
+        """
+        blockchain = Blockchain()
+        blockchain.chain = list(
+            map(lambda block_json: Block.from_json(block_json), chain_json)
+        )
+
+        return blockchain
+
     @staticmethod
     def is_valid_chain(chain):
         """
