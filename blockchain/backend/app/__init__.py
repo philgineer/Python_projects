@@ -11,7 +11,7 @@ from backend.wallet.wallet import Wallet
 from backend.wallet.transaction_pool import TransactionPool
 from backend.wallet.transaction import Transaction
 
-app = Flask(__name__, static_folder='../../frontend/build', static_url_path='/')
+app = Flask(__name__)
 CORS(app, resources={ r'/*': {'origins': 'http://localhost:3000'}})
 blockchain = Blockchain()
 wallet = Wallet(blockchain)
@@ -19,10 +19,8 @@ transaction_pool = TransactionPool()
 pubsub = PubSub(blockchain, transaction_pool)
 
 @app.route('/')
-def index():
-    return app.send_static_file('index.html')
-# def route_default():
-#     return 'Welcome to blockchain'
+def route_default():
+    return 'Welcome to blockchain'
 
 @app.route('/blockchain')
 def route_blockchain():
@@ -118,6 +116,4 @@ if os.environ.get('SEED_DATA') == 'True':
             Transaction(Wallet(), Wallet().address, random.randint(9,70))
         )
 
-# app.run(port=PORT)
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
+app.run(port=PORT)
