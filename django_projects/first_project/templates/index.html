@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <h1>Home page</h1>
+    <h3>This is run by Django</h3>
+    <img src="static/1.png" alt="main_image" width="50%">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+
+    <h2>Form</h2>
+    <form action="{% url 'result' %}">
+        {% csrf_token %}
+        <input type="text" name="input1">
+        <input type="submit" value="Submit">
+    </form>
+
+    <br><br>
+    <button onclick="buttonFunc()">Dark mode</button>
+
+    <script type="text/javascript" src="{% static 'main.js' %}"></script>
+</body>
+</html>
