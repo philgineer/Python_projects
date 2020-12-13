@@ -2,9 +2,9 @@
 My python projects
 
 <ul>
-<li>Blockchain Project<br>
-Reference Course: (Udemy) "Python, JS, & React | Build a Blockchain & Cryptocurrency"<br>
-<a href='https://github.com/philgineer/python_projects/tree/master/blockchain'>Check codes</a><br>
+<li>
+  OpenCV and Computer Vision study<br>
+  Reference Lecture: <a href="https://www.udemy.com/course/python-for-computer-vision-with-opencv-and-deep-learning/">Python for Computer Vision with OpenCV and Deep Learning</a>
   </li><br>
 
 <li>
