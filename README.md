@@ -10,7 +10,7 @@ My python projects
 <li>
   Big_data_campus(2019)<br>
   Python, Data Analysis, Machine learning projects from an offline course. <br>
-  "청년 빅데이터 캠퍼스": Two months full-time bootcamp course</li>
+  데이터 사이언티스트 양성과정 (청년 빅데이터 캠퍼스): Data Scientist full-time bootcamp course</li>
   
  
 
