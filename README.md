@@ -15,6 +15,7 @@ My python projects
   
  <li>
   Deeplearning_math<br>
+  Mathematical approach to Deep learning and Data science<br>
   Reference Lecture: <a href="https://www.fastcampus.co.kr/data_online_mathdeep">수학적으로 접근하는 딥러닝</a> (Fastcampus)
   </li>
  
